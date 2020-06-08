@@ -107,11 +107,11 @@ class Config(multiconfig.DefaultConfig):
     # IMPORTANT: grant yourself admin rights! replace YourName with
     # your user name. See HelpOnAccessControlLists for more help.
     # All acl_rights_xxx options must use unicode [Unicode]
-    #acl_rights_before = u"mmAdmin:read,write,delete,revert,admin"
+    acl_rights_before = u"mmAdmin:read,write,delete,revert,admin"
 
     # This is the default ACL that applies to pages without an ACL.
     # Adapt it to your needs, consider using an EditorGroup.
-    acl_rights_default = u"Trusted:read,write,delete,revert Known:read All:read,write,delete,revert"
+    acl_rights_default = u"EditorGroup:read,write,delete,revert"
 
     # The default (ENABLED) password_checker will keep users from choosing too
     # short or too easy passwords. If you don't like this and your site has
@@ -184,3 +184,5 @@ class Config(multiconfig.DefaultConfig):
     # Enable graphical charts, requires gdchart.
     #chart_options = {'width': 600, 'height': 300}
 
+    editor_force = False
+    editor_ui = 'freechoice'
